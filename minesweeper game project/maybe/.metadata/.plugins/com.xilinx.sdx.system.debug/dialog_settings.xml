@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="minesweeper" key="programflash.hwplatform"/>
+	<item value="Auto Detect" key="minesweeper-device"/>
+	<item value="" key="minesweeper-offSet"/>
+	<item value="false" key="minesweeper-verifyFlash"/>
+	<item value="" key="minesweeper-imgFile"/>
+	<item value="Local" key="minesweeper-target"/>
+	<item value="C:/Users/raoja/Desktop/uni/520/finalproject/maybe/disappointing_wrapper/export/disappointing_wrapper/sw/disappointing_wrapper/boot/fsbl.elf" key="minesweeper-fsblFile"/>
+	<item value="false" key="minesweeper-blankCheck"/>
+	<item value="qspi-x4-single" key="minesweeper-flashType"/>
+</section>

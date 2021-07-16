@@ -8,7 +8,7 @@ be able to enter different parameters and get different waveforms.
 3.resolution of all parameters were 16 bits.
 
 My code generates the points for the waveform and using different inputs values different waveforms are generated.
-The coordinates for the generated points stored in the excel file.
+The coordinates for the generated points stored in the excel file.The project was done in Vivado using the zybo board and vitis SDK.
 
 -to open vivado project go under the minip1 and click on minip1 app file, the sdk files are in this folder as well
 -for the sdk , the main c file(its called helloworld) can be under atm3mp1>src, a copy of it is also placed outside the main vivado project folder

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun May  9 14:24:26 2021
+# Process ID: 12772
+# Current directory: C:/Users/raoja/Desktop/uni/520/finalproject/maybe/maybe.runs/synth_1
+# Command line: vivado.exe -log halol_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source halol_wrapper.tcl
+# Log file: C:/Users/raoja/Desktop/uni/520/finalproject/maybe/maybe.runs/synth_1/halol_wrapper.vds
+# Journal file: C:/Users/raoja/Desktop/uni/520/finalproject/maybe/maybe.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source halol_wrapper.tcl -notrace

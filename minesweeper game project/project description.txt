@@ -1,0 +1,7 @@
+The goal of this project was to design an implementation for a minesweeper game. The switches and buttons were used as input 
+for the game and the UART was used to display the output of the game. The rest of the logic was done in software. The game demo image shows the 
+game in action. The project was done in Vivado using the zybo board and vitis SDK.
+
+-open the maybe folder and click on maybe app file to open in vivado
+-under the maybe folder the sdk files can be found, the project of interest is minesweeperintver, in this folder u can find the main c file (helloworld.c)
+that was used for the project, the hardware for the sdk was under desgin_wrapper

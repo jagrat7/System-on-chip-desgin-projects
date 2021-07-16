@@ -1,0 +1,104 @@
+2021-05-09T14:12:23.43726300255-14:12:23 **** Incremental Build of configuration Debug for project minesweeper ****
+000-make all 
+000-make --no-print-directory pre-build
+000-a9-linaro-pre-build-step
+000-' '
+000-make --no-print-directory main-build
+000-'Building file: ../src/mainapp.c'
+000-'Invoking: ARM v7 gcc compiler'
+000-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/mainapp.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Users/raoja/Desktop/uni/520/finalproject/maybe/disappointing_wrapper/export/disappointing_wrapper/sw/disappointing_wrapper/standalone_domain/bspinclude/include -MMD -MP -MF"src/mainapp.d" -MT"src/mainapp.o" -o "src/mainapp.o" "../src/mainapp.c"
+000-../src/mainapp.c: In function 'makeMove':
+000/minesweeper/src/mainapp.c55-1-1assignment to 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]1-../src/mainapp.c:55:12: warning: assignment to 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+000-  int buf2=y=btn_data;
+000-            ^
+000/minesweeper/src/mainapp.c55-1-1initialization of 'int' from 'int *' makes integer from pointer without a cast [-Wint-conversion]1-../src/mainapp.c:55:11: warning: initialization of 'int' from 'int *' makes integer from pointer without a cast [-Wint-conversion]
+000-  int buf2=y=btn_data;
+000-           ^
+000/minesweeper/src/mainapp.c57-1-1assignment to 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]1-../src/mainapp.c:57:4: warning: assignment to 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+000-   x=buf;
+000-    ^
+000/minesweeper/src/mainapp.c58-1-1assignment to 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]1-../src/mainapp.c:58:4: warning: assignment to 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+000-   y=buf2;
+000-    ^
+000-../src/mainapp.c: In function 'countAdjacentMines':
+000/minesweeper/src/mainapp.c91-1-1unused variable 'i' [-Wunused-variable]1-../src/mainapp.c:91:6: warning: unused variable 'i' [-Wunused-variable]
+000-  int i;
+000-      ^
+000-../src/mainapp.c: In function 'playMinesweeperUtil':
+000/minesweeper/src/mainapp.c181-1-1unused variable 'j' [-Wunused-variable]1-../src/mainapp.c:181:9: warning: unused variable 'j' [-Wunused-variable]
+000-  int i, j;
+000-         ^
+000-../src/mainapp.c: In function 'playMinesweeper':
+000/minesweeper/src/mainapp.c374-1-1passing argument 1 of 'initialise' from incompatible pointer type [-Wincompatible-pointer-types]1-../src/mainapp.c:374:14: warning: passing argument 1 of 'initialise' from incompatible pointer type [-Wincompatible-pointer-types]
+000-  initialise (realBoard, myBoard);
+000-              ^~~~~~~~~
+000/minesweeper/src/mainapp.c321-1-1expected 'char (*)[5]' but argument is of type 'char (*)[4]'0-../src/mainapp.c:321:22: note: expected 'char (*)[5]' but argument is of type 'char (*)[4]'
+000- void initialise(char realBoard[][MAXSIDE], char myBoard[][MAXSIDE])
+000-                 ~~~~~^~~~~~~~~~~~~~~~~~~~
+000/minesweeper/src/mainapp.c374-1-1passing argument 2 of 'initialise' from incompatible pointer type [-Wincompatible-pointer-types]1-../src/mainapp.c:374:25: warning: passing argument 2 of 'initialise' from incompatible pointer type [-Wincompatible-pointer-types]
+000-  initialise (realBoard, myBoard);
+000-                         ^~~~~~~
+000/minesweeper/src/mainapp.c321-1-1expected 'char (*)[5]' but argument is of type 'char (*)[4]'0-../src/mainapp.c:321:49: note: expected 'char (*)[5]' but argument is of type 'char (*)[4]'
+000- void initialise(char realBoard[][MAXSIDE], char myBoard[][MAXSIDE])
+000-                                            ~~~~~^~~~~~~~~~~~~~~~~~
+000/minesweeper/src/mainapp.c12-1-1passing argument 1 of 'placeMines' makes pointer from integer without a cast [-Wint-conversion]1-../src/mainapp.c:12:16: warning: passing argument 1 of 'placeMines' makes pointer from integer without a cast [-Wint-conversion]
+000- #define dmines 10
+000-                ^~
+000/minesweeper/src/mainapp.c377-1-1in expansion of macro 'dmines'0-../src/mainapp.c:377:14: note: in expansion of macro 'dmines'
+000-  placeMines (dmines, realBoard);
+000-              ^~~~~~
+000/minesweeper/src/mainapp.c288-1-1expected 'int (*)[2]' but argument is of type 'int'0-../src/mainapp.c:288:21: note: expected 'int (*)[2]' but argument is of type 'int'
+000- void placeMines(int mines[][2], char realBoard[][MAXSIDE])
+000-                 ~~~~^~~~~~~~~~
+000/minesweeper/src/mainapp.c377-1-1passing argument 2 of 'placeMines' from incompatible pointer type [-Wincompatible-pointer-types]1-../src/mainapp.c:377:22: warning: passing argument 2 of 'placeMines' from incompatible pointer type [-Wincompatible-pointer-types]
+000-  placeMines (dmines, realBoard);
+000-                      ^~~~~~~~~
+000/minesweeper/src/mainapp.c288-1-1expected 'char (*)[5]' but argument is of type 'char (*)[4]'0-../src/mainapp.c:288:38: note: expected 'char (*)[5]' but argument is of type 'char (*)[4]'
+000- void placeMines(int mines[][2], char realBoard[][MAXSIDE])
+000-                                 ~~~~~^~~~~~~~~~~~~~~~~~~~
+000/minesweeper/src/mainapp.c387-1-1passing argument 1 of 'printBoard' from incompatible pointer type [-Wincompatible-pointer-types]1-../src/mainapp.c:387:15: warning: passing argument 1 of 'printBoard' from incompatible pointer type [-Wincompatible-pointer-types]
+000-   printBoard (myBoard);
+000-               ^~~~~~~
+000/minesweeper/src/mainapp.c64-1-1expected 'char (*)[5]' but argument is of type 'char (*)[4]'0-../src/mainapp.c:64:22: note: expected 'char (*)[5]' but argument is of type 'char (*)[4]'
+000- void printBoard(char myBoard[][MAXSIDE])
+000-                 ~~~~~^~~~~~~~~~~~~~~~~~
+000/minesweeper/src/mainapp.c397-1-1passing argument 3 of 'isMine' from incompatible pointer type [-Wincompatible-pointer-types]1-../src/mainapp.c:397:22: warning: passing argument 3 of 'isMine' from incompatible pointer type [-Wincompatible-pointer-types]
+000-    if (isMine (x, y, realBoard) == true)
+000-                      ^~~~~~~~~
+000/minesweeper/src/mainapp.c34-1-1expected 'char (*)[5]' but argument is of type 'char (*)[4]'0-../src/mainapp.c:34:37: note: expected 'char (*)[5]' but argument is of type 'char (*)[4]'
+000- bool isMine (int row, int col, char board[][MAXSIDE])
+000-                                ~~~~~^~~~~~~~~~~~~~~~
+000/minesweeper/src/mainapp.c398-1-1passing argument 3 of 'replaceMine' from incompatible pointer type [-Wincompatible-pointer-types]1-../src/mainapp.c:398:24: warning: passing argument 3 of 'replaceMine' from incompatible pointer type [-Wincompatible-pointer-types]
+000-     replaceMine (x, y, realBoard);
+000-                        ^~~~~~~~~
+000/minesweeper/src/mainapp.c342-1-1expected 'char (*)[5]' but argument is of type 'char (*)[4]'0-../src/mainapp.c:342:42: note: expected 'char (*)[5]' but argument is of type 'char (*)[4]'
+000- void replaceMine (int row, int col, char board[][MAXSIDE])
+000-                                     ~~~~~^~~~~~~~~~~~~~~~
+000/minesweeper/src/mainapp.c403-1-1passing argument 1 of 'playMinesweeperUtil' from incompatible pointer type [-Wincompatible-pointer-types]1-../src/mainapp.c:403:35: warning: passing argument 1 of 'playMinesweeperUtil' from incompatible pointer type [-Wincompatible-pointer-types]
+000-   gameOver = playMinesweeperUtil (myBoard, realBoard, mines, x, y, &movesLeft);
+000-                                   ^~~~~~~
+000/minesweeper/src/mainapp.c174-1-1expected 'char (*)[5]' but argument is of type 'char (*)[4]'0-../src/mainapp.c:174:31: note: expected 'char (*)[5]' but argument is of type 'char (*)[4]'
+000- bool playMinesweeperUtil(char myBoard[][MAXSIDE], char realBoard[][MAXSIDE],int mines[][2], int row, int col, int *movesLeft)
+000-                          ~~~~~^~~~~~~~~~~~~~~~~~
+000/minesweeper/src/mainapp.c403-1-1passing argument 2 of 'playMinesweeperUtil' from incompatible pointer type [-Wincompatible-pointer-types]1-../src/mainapp.c:403:44: warning: passing argument 2 of 'playMinesweeperUtil' from incompatible pointer type [-Wincompatible-pointer-types]
+000-   gameOver = playMinesweeperUtil (myBoard, realBoard, mines, x, y, &movesLeft);
+000-                                            ^~~~~~~~~
+000/minesweeper/src/mainapp.c174-1-1expected 'char (*)[5]' but argument is of type 'char (*)[4]'0-../src/mainapp.c:174:56: note: expected 'char (*)[5]' but argument is of type 'char (*)[4]'
+000- bool playMinesweeperUtil(char myBoard[][MAXSIDE], char realBoard[][MAXSIDE],int mines[][2], int row, int col, int *movesLeft)
+000-                                                   ~~~~~^~~~~~~~~~~~~~~~~~~~
+000-'Finished building: ../src/mainapp.c'
+000-' '
+000-'Building target: minesweeper.elf'
+000-'Invoking: ARM v7 gcc linker'
+000-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Users/raoja/Desktop/uni/520/finalproject/maybe/disappointing_wrapper/export/disappointing_wrapper/sw/disappointing_wrapper/standalone_domain/bsplib/lib -o "minesweeper.elf"  ./src/mainapp.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+000-'Finished building target: minesweeper.elf'
+000-' '
+000-'Invoking: ARM v7 Print Size'
+000-arm-none-eabi-size minesweeper.elf  |tee "minesweeper.elf.size"
+000-   text	   data	    bss	    dec	    hex	filename
+000-  35960	   1576	  23320	  60856	   edb8	minesweeper.elf
+000-'Finished building: minesweeper.elf.size'
+000-' '
+00255-
+14:12:24 Build Finished (took 722ms)
+

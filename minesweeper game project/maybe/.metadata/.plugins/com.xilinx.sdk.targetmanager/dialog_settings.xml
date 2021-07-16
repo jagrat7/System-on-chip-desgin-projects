@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="" key="minesweeper-bmmFile"/>
+	<item value="Auto Detect" key="minesweeper-device"/>
+	<item value="false" key="minesweeper-skip_rev_check"/>
+	<item value="C:\Users\raoja\Desktop\uni\520\finalproject\maybe\abitdisappointing_wrapper.bit" key="minesweeper-bitFile"/>
+	<item value="false" key="minesweeper-partial_bit"/>
+	<item value="Local" key="minesweeper-target"/>
+	<item value="minesweeper" key="programfpga.sdxproject"/>
+</section>

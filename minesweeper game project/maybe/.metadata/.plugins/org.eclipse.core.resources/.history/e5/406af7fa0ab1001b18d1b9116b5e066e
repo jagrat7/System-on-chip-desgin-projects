@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="minesweeperintver" location="C:/Users/raoja/Desktop/uni/520/finalproject/maybe/minesweeperintver" platform="C:/Users/raoja/Desktop/uni/520/finalproject/maybe/abitdisappointing_wrapper/export/abitdisappointing_wrapper/abitdisappointing_wrapper.xpfm" platformUID="xilinx:zybo-z7-10::0.0(custom)" systemProject="minesweeperintver_system" sysConfig="abitdisappointing_wrapper" runtime="cpp" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="2a47c30629491a0e151c901b541adc49">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.2014976315" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.654545422" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

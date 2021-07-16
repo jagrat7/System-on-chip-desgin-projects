@@ -1,0 +1,13 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="10" filename="imageprosseing/imgpro.c" linenumber="324" name="add_ln324" contextFuncName="invertf" moduleName="invertf" rtlName="add_ln324_fu_106_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="19" fileDirectory="C:\Users\raoja\Desktop\uni\520"><\/item>
+<item  id="11" filename="imageprosseing/imgpro.c" linenumber="324" name="icmp_ln324" contextFuncName="invertf" moduleName="invertf" rtlName="icmp_ln324_fu_112_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="C:\Users\raoja\Desktop\uni\520"><\/item>
+<item  id="13" filename="imageprosseing/imgpro.c" linenumber="324" name="i" contextFuncName="invertf" moduleName="invertf" rtlName="i_fu_118_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="C:\Users\raoja\Desktop\uni\520"><\/item>
+<item  id="21" filename="imageprosseing/imgpro.c" linenumber="326" name="icmp_ln326" contextFuncName="invertf" moduleName="invertf" rtlName="icmp_ln326_fu_124_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="C:\Users\raoja\Desktop\uni\520"><\/item>
+<item  id="23" filename="imageprosseing/imgpro.c" linenumber="326" name="j" contextFuncName="invertf" moduleName="invertf" rtlName="j_fu_130_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="C:\Users\raoja\Desktop\uni\520"><\/item>
+<item  id="29" filename="imageprosseing/imgpro.c" linenumber="328" name="zext_ln328" contextFuncName="invertf" moduleName="invertf" rtlName="zext_ln328_fu_136_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Users\raoja\Desktop\uni\520"><\/item>
+<item  id="30" filename="imageprosseing/imgpro.c" linenumber="328" name="add_ln328" contextFuncName="invertf" moduleName="invertf" rtlName="add_ln328_fu_140_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="19" fileDirectory="C:\Users\raoja\Desktop\uni\520"><\/item>
+<item  id="31" filename="imageprosseing/imgpro.c" linenumber="328" name="zext_ln328_1" contextFuncName="invertf" moduleName="invertf" rtlName="zext_ln328_1_fu_146_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Users\raoja\Desktop\uni\520"><\/item>
+<item  id="35" filename="imageprosseing/imgpro.c" linenumber="328" name="sub_ln328" contextFuncName="invertf" moduleName="invertf" rtlName="bi_d0" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="C:\Users\raoja\Desktop\uni\520"><\/item>
+<\/annotationInfo>
+</annotationInfo>

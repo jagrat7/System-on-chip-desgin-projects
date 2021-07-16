@@ -1,0 +1,14 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="10" filename="imageprosseing/imgpro.c" linenumber="43" name="add_ln43" contextFuncName="binaryf" moduleName="binaryf" rtlName="add_ln43_fu_106_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="19" fileDirectory="C:\Users\raoja\Desktop\uni\520"><\/item>
+<item  id="11" filename="imageprosseing/imgpro.c" linenumber="43" name="icmp_ln43" contextFuncName="binaryf" moduleName="binaryf" rtlName="icmp_ln43_fu_112_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="C:\Users\raoja\Desktop\uni\520"><\/item>
+<item  id="13" filename="imageprosseing/imgpro.c" linenumber="43" name="i" contextFuncName="binaryf" moduleName="binaryf" rtlName="i_fu_118_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="C:\Users\raoja\Desktop\uni\520"><\/item>
+<item  id="21" filename="imageprosseing/imgpro.c" linenumber="45" name="icmp_ln45" contextFuncName="binaryf" moduleName="binaryf" rtlName="icmp_ln45_fu_124_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="C:\Users\raoja\Desktop\uni\520"><\/item>
+<item  id="23" filename="imageprosseing/imgpro.c" linenumber="45" name="j" contextFuncName="binaryf" moduleName="binaryf" rtlName="j_fu_130_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="15" fileDirectory="C:\Users\raoja\Desktop\uni\520"><\/item>
+<item  id="29" filename="imageprosseing/imgpro.c" linenumber="47" name="zext_ln47" contextFuncName="binaryf" moduleName="binaryf" rtlName="zext_ln47_fu_136_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Users\raoja\Desktop\uni\520"><\/item>
+<item  id="30" filename="imageprosseing/imgpro.c" linenumber="47" name="add_ln47" contextFuncName="binaryf" moduleName="binaryf" rtlName="add_ln47_fu_140_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="19" fileDirectory="C:\Users\raoja\Desktop\uni\520"><\/item>
+<item  id="31" filename="imageprosseing/imgpro.c" linenumber="47" name="zext_ln47_1" contextFuncName="binaryf" moduleName="binaryf" rtlName="zext_ln47_1_fu_146_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Users\raoja\Desktop\uni\520"><\/item>
+<item  id="35" filename="imageprosseing/imgpro.c" linenumber="47" name="icmp_ln47" contextFuncName="binaryf" moduleName="binaryf" rtlName="icmp_ln47_fu_151_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="18" fileDirectory="C:\Users\raoja\Desktop\uni\520"><\/item>
+<item  id="36" filename="imageprosseing/imgpro.c" linenumber="47" name="zext_ln47_2" contextFuncName="binaryf" moduleName="binaryf" rtlName="b_d0" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="C:\Users\raoja\Desktop\uni\520"><\/item>
+<\/annotationInfo>
+</annotationInfo>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [HLS 200-40] Cannot find test bench file 'tb.c'" projectName="imageprosseing" solutionName="decompunroll" date="2021-05-15T17:47:38.828-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find test bench file 'tb.c'" projectName="imageprosseing" solutionName="decomplat" date="2021-05-15T17:46:07.207-0700" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'col1' (imageprosseing/imgpro.c:284:3) in function 'decompressf' : &#xD;&#xA;&#xD;&#xA;the outer loop is not a perfect loop because either the parent loop or the sub loop has no computeable trip count." projectName="imageprosseing" solutionName="decomppipe" date="2021-05-15T17:44:11.778-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find test bench file 'tb.c'" projectName="imageprosseing" solutionName="decomppipe" date="2021-05-15T17:44:02.884-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find test bench file 'tb.c'" projectName="imageprosseing" solutionName="decomp" date="2021-05-15T17:42:27.514-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find test bench file 'tb.c'" projectName="imageprosseing" solutionName="compressionlat" date="2021-05-15T17:32:57.016-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find test bench file 'tb.c'" projectName="imageprosseing" solutionName="compressionunroll" date="2021-05-15T17:28:31.730-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find test bench file 'tb.c'" projectName="imageprosseing" solutionName="compressionpipe" date="2021-05-15T17:19:22.194-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find test bench file 'tb.c'" projectName="imageprosseing" solutionName="compression" date="2021-05-15T17:17:42.990-0700" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'invertf' consists of the following:&#xD;&#xA;&#x9;'load' operation ('ai_load', imageprosseing/imgpro.c:328) on array 'ai' [34]  (3.25 ns)&#xD;&#xA;&#x9;'sub' operation ('sub_ln328', imageprosseing/imgpro.c:328) [35]  (2.55 ns)&#xD;&#xA;&#x9;'store' operation ('bi_addr_write_ln328', imageprosseing/imgpro.c:328) of variable 'sub_ln328', imageprosseing/imgpro.c:328 on array 'bi' [36]  (3.25 ns)" projectName="imageprosseing" solutionName="invertlatency" date="2021-05-15T17:15:22.621-0700" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (9.06ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="imageprosseing" solutionName="invertlatency" date="2021-05-15T17:15:22.572-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find test bench file 'tb.c'" projectName="imageprosseing" solutionName="invertlatency" date="2021-05-15T17:15:12.162-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find test bench file 'tb.c'" projectName="imageprosseing" solutionName="invertunroll" date="2021-05-15T17:11:59.344-0700" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path in module 'invertf' consists of the following:&#xD;&#xA;&#x9;'mul' operation of DSP[27] ('mul_ln328', imageprosseing/imgpro.c:328) [22]  (3.36 ns)&#xD;&#xA;&#x9;'add' operation of DSP[27] ('add_ln328', imageprosseing/imgpro.c:328) [27]  (3.02 ns)&#xD;&#xA;&#x9;'getelementptr' operation ('ai_addr', imageprosseing/imgpro.c:328) [29]  (0 ns)&#xD;&#xA;&#x9;'load' operation ('ai_load', imageprosseing/imgpro.c:328) on array 'ai' [31]  (3.25 ns)" projectName="imageprosseing" solutionName="invertpipe" date="2021-05-15T17:08:38.290-0700" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns)." projectName="imageprosseing" solutionName="invertpipe" date="2021-05-15T17:08:38.280-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find test bench file 'tb.c'" projectName="imageprosseing" solutionName="invertpipe" date="2021-05-15T17:08:12.315-0700" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find test bench file 'tb.c'" projectName="imageprosseing" solutionName="invert" date="2021-05-15T16:56:53.416-0700" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

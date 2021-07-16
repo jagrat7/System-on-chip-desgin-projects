@@ -1,0 +1,21 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "blurf",
+          "label": "colll",
+          "functionLabel": "",
+          "pragma": {
+            "name": "LATENCY",
+            "option": [
+              {
+                "name": "min",
+                "value": "0"
+              },
+              {
+                "name": "max",
+                "value": "1"
+              }
+            ]
+          }
+        }]
+    }]}

@@ -1,0 +1,21 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "binaryf",
+          "label": "Col",
+          "functionLabel": "",
+          "pragma": {
+            "name": "LATENCY",
+            "option": [
+              {
+                "name": "min",
+                "value": "0"
+              },
+              {
+                "name": "max",
+                "value": "1"
+              }
+            ]
+          }
+        }]
+    }]}

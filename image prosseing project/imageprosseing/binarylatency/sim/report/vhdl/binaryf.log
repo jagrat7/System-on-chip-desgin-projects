@@ -1,0 +1,4 @@
+ERROR: [COSIM-41] ../../tb.c is not found.
+WARNING: [COSIM-42] Please make sure test bench files are set correctly in Vivado HLS project tcl.
+ERROR: [COSIM-5] *** C/RTL co-simulation file generation failed. ***
+ERROR: [COSIM-4] *** C/RTL co-simulation finished: FAIL ***

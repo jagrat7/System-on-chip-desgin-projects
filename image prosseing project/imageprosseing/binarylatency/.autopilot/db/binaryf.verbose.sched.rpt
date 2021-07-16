@@ -1,0 +1,177 @@
+
+
+================================================================
+== Vivado HLS Report for 'binaryf'
+================================================================
+* Date:           Sat May 15 05:27:47 2021
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        imageprosseing
+* Solution:       binarylatency
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.981|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+-------+-------+-------+---------+
+    |    Latency    |    Interval   | Pipeline|
+    |  min  |  max  |  min  |  max  |   Type  |
+    +-------+-------+-------+-------+---------+
+    |  20201|  20201|  20201|  20201|   none  |
+    +-------+-------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-------+-------+----------+-----------+-----------+------+----------+
+        |          |    Latency    | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|  min  |  max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-------+-------+----------+-----------+-----------+------+----------+
+        |- Row     |  20200|  20200|       202|          -|          -|   100|    no    |
+        | + Col    |    200|    200|         2|          -|          -|   100|    no    |
+        +----------+-------+-------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 2 
+4 --> 3 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([10000 x i32]* %a) nounwind, !map !64"   --->   Operation 5 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([10000 x i32]* %b) nounwind, !map !68"   --->   Operation 6 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([8 x i8]* @binaryf_str) nounwind"   --->   Operation 7 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (1.76ns)   --->   "br label %1" [imageprosseing/imgpro.c:43]   --->   Operation 8 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 1.87>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%i_0 = phi i7 [ 0, %0 ], [ %i, %Row_end ]"   --->   Operation 9 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "%phi_mul = phi i14 [ 0, %0 ], [ %add_ln43, %Row_end ]" [imageprosseing/imgpro.c:43]   --->   Operation 10 'phi' 'phi_mul' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (1.81ns)   --->   "%add_ln43 = add i14 %phi_mul, 100" [imageprosseing/imgpro.c:43]   --->   Operation 11 'add' 'add_ln43' <Predicate = true> <Delay = 1.81> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 12 [1/1] (1.48ns)   --->   "%icmp_ln43 = icmp eq i7 %i_0, -28" [imageprosseing/imgpro.c:43]   --->   Operation 12 'icmp' 'icmp_ln43' <Predicate = true> <Delay = 1.48> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 100, i64 100, i64 100) nounwind"   --->   Operation 13 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (1.87ns)   --->   "%i = add i7 %i_0, 1" [imageprosseing/imgpro.c:43]   --->   Operation 14 'add' 'i' <Predicate = true> <Delay = 1.87> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "br i1 %icmp_ln43, label %3, label %Row_begin" [imageprosseing/imgpro.c:43]   --->   Operation 15 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str) nounwind" [imageprosseing/imgpro.c:44]   --->   Operation 16 'specloopname' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str) nounwind" [imageprosseing/imgpro.c:44]   --->   Operation 17 'specregionbegin' 'tmp' <Predicate = (!icmp_ln43)> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (1.76ns)   --->   "br label %2" [imageprosseing/imgpro.c:45]   --->   Operation 18 'br' <Predicate = (!icmp_ln43)> <Delay = 1.76>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "ret void" [imageprosseing/imgpro.c:68]   --->   Operation 19 'ret' <Predicate = (icmp_ln43)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 5.06>
+ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%j_0 = phi i7 [ 0, %Row_begin ], [ %j, %Col ]"   --->   Operation 20 'phi' 'j_0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 21 [1/1] (1.48ns)   --->   "%icmp_ln45 = icmp eq i7 %j_0, -28" [imageprosseing/imgpro.c:45]   --->   Operation 21 'icmp' 'icmp_ln45' <Predicate = true> <Delay = 1.48> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%empty_2 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 100, i64 100, i64 100) nounwind"   --->   Operation 22 'speclooptripcount' 'empty_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 23 [1/1] (1.87ns)   --->   "%j = add i7 %j_0, 1" [imageprosseing/imgpro.c:45]   --->   Operation 23 'add' 'j' <Predicate = true> <Delay = 1.87> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "br i1 %icmp_ln45, label %Row_end, label %Col" [imageprosseing/imgpro.c:45]   --->   Operation 24 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([4 x i8]* @p_str1) nounwind" [imageprosseing/imgpro.c:46]   --->   Operation 25 'specregionbegin' 'tmp_1' <Predicate = (!icmp_ln45)> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (0.00ns)   --->   "%zext_ln47 = zext i7 %j_0 to i14" [imageprosseing/imgpro.c:47]   --->   Operation 26 'zext' 'zext_ln47' <Predicate = (!icmp_ln45)> <Delay = 0.00>
+ST_3 : Operation 27 [1/1] (1.81ns)   --->   "%add_ln47 = add i14 %phi_mul, %zext_ln47" [imageprosseing/imgpro.c:47]   --->   Operation 27 'add' 'add_ln47' <Predicate = (!icmp_ln45)> <Delay = 1.81> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.81> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%zext_ln47_1 = zext i14 %add_ln47 to i64" [imageprosseing/imgpro.c:47]   --->   Operation 28 'zext' 'zext_ln47_1' <Predicate = (!icmp_ln45)> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%a_addr = getelementptr [10000 x i32]* %a, i64 0, i64 %zext_ln47_1" [imageprosseing/imgpro.c:47]   --->   Operation 29 'getelementptr' 'a_addr' <Predicate = (!icmp_ln45)> <Delay = 0.00>
+ST_3 : Operation 30 [2/2] (3.25ns)   --->   "%a_load = load i32* %a_addr, align 4" [imageprosseing/imgpro.c:47]   --->   Operation 30 'load' 'a_load' <Predicate = (!icmp_ln45)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10000> <RAM>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%empty_4 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str, i32 %tmp) nounwind" [imageprosseing/imgpro.c:56]   --->   Operation 31 'specregionend' 'empty_4' <Predicate = (icmp_ln45)> <Delay = 0.00>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "br label %1" [imageprosseing/imgpro.c:43]   --->   Operation 32 'br' <Predicate = (icmp_ln45)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 8.98>
+ST_4 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @p_str1) nounwind" [imageprosseing/imgpro.c:46]   --->   Operation 33 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLatency(i32 0, i32 1, [1 x i8]* @p_str2) nounwind" [imageprosseing/imgpro.c:47]   --->   Operation 34 'speclatency' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 35 [1/1] (0.00ns)   --->   "%b_addr = getelementptr [10000 x i32]* %b, i64 0, i64 %zext_ln47_1" [imageprosseing/imgpro.c:49]   --->   Operation 35 'getelementptr' 'b_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 36 [1/2] (3.25ns)   --->   "%a_load = load i32* %a_addr, align 4" [imageprosseing/imgpro.c:47]   --->   Operation 36 'load' 'a_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10000> <RAM>
+ST_4 : Operation 37 [1/1] (2.47ns)   --->   "%icmp_ln47 = icmp sgt i32 %a_load, 150" [imageprosseing/imgpro.c:47]   --->   Operation 37 'icmp' 'icmp_ln47' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 38 [1/1] (0.00ns)   --->   "%zext_ln47_2 = zext i1 %icmp_ln47 to i32" [imageprosseing/imgpro.c:47]   --->   Operation 38 'zext' 'zext_ln47_2' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 39 [1/1] (3.25ns)   --->   "store i32 %zext_ln47_2, i32* %b_addr, align 4" [imageprosseing/imgpro.c:49]   --->   Operation 39 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 10000> <RAM>
+ST_4 : Operation 40 [1/1] (0.00ns)   --->   "%empty_3 = call i32 (...)* @_ssdm_op_SpecRegionEnd([4 x i8]* @p_str1, i32 %tmp_1) nounwind" [imageprosseing/imgpro.c:55]   --->   Operation 40 'specregionend' 'empty_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 41 [1/1] (0.00ns)   --->   "br label %2" [imageprosseing/imgpro.c:45]   --->   Operation 41 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', imageprosseing/imgpro.c:43) [8]  (1.77 ns)
+
+ <State 2>: 1.87ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', imageprosseing/imgpro.c:43) [8]  (0 ns)
+	'add' operation ('i', imageprosseing/imgpro.c:43) [13]  (1.87 ns)
+
+ <State 3>: 5.07ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', imageprosseing/imgpro.c:45) [20]  (0 ns)
+	'add' operation ('add_ln47', imageprosseing/imgpro.c:47) [30]  (1.81 ns)
+	'getelementptr' operation ('a_addr', imageprosseing/imgpro.c:47) [32]  (0 ns)
+	'load' operation ('a_load', imageprosseing/imgpro.c:47) on array 'a' [34]  (3.25 ns)
+
+ <State 4>: 8.98ns
+The critical path consists of the following:
+	'load' operation ('a_load', imageprosseing/imgpro.c:47) on array 'a' [34]  (3.25 ns)
+	'icmp' operation ('icmp_ln47', imageprosseing/imgpro.c:47) [35]  (2.47 ns)
+	'store' operation ('store_ln49', imageprosseing/imgpro.c:49) of variable 'zext_ln47_2', imageprosseing/imgpro.c:47 on array 'b' [37]  (3.25 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

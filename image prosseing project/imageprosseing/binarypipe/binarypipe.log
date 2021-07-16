@@ -1,0 +1,238 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'imageprosseing/imgpro.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:30 . Memory (MB): peak = 174.391 ; gain = 106.758
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:30 . Memory (MB): peak = 174.391 ; gain = 106.758
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:31 . Memory (MB): peak = 174.391 ; gain = 106.758
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:31 . Memory (MB): peak = 174.391 ; gain = 106.758
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:32 . Memory (MB): peak = 174.391 ; gain = 106.758
+INFO: [XFORM 203-541] Flattening a loop nest 'Row' (imageprosseing/imgpro.c:44:4) in function 'binaryf'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:32 . Memory (MB): peak = 174.391 ; gain = 106.758
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'binaryf' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'binaryf' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Row_Col'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 2, Final II = 2, Depth = 4.
+WARNING: [SCHED 204-21] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'binaryf' consists of the following:
+	'mul' operation of DSP[27] ('mul_ln47', imageprosseing/imgpro.c:47) [22]  (3.36 ns)
+	'add' operation of DSP[27] ('add_ln47', imageprosseing/imgpro.c:47) [27]  (3.02 ns)
+	'getelementptr' operation ('a_addr', imageprosseing/imgpro.c:47) [29]  (0 ns)
+	'load' operation ('a_load', imageprosseing/imgpro.c:47) on array 'a' [31]  (3.25 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 32.369 seconds; current allocated memory: 93.300 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.139 seconds; current allocated memory: 93.435 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'binaryf' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'binaryf/a' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'binaryf/b' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'binaryf' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'binaryf_mac_muladd_7ns_8ns_7ns_14_1_1' to 'binaryf_mac_muladbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'binaryf_mac_muladbkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'binaryf'.
+INFO: [HLS 200-111]  Elapsed time: 0.187 seconds; current allocated memory: 93.786 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:34 . Memory (MB): peak = 174.391 ; gain = 106.758
+INFO: [VHDL 208-304] Generating VHDL RTL for binaryf.
+INFO: [VLOG 209-307] Generating Verilog RTL for binaryf.
+INFO: [HLS 200-112] Total elapsed time: 34.215 seconds; peak allocated memory: 93.786 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'imageprosseing/imgpro.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 175.902 ; gain = 85.547
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 175.902 ; gain = 85.547
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 175.902 ; gain = 85.547
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 175.902 ; gain = 85.547
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Row' (imageprosseing/imgpro.c:44) in function 'binaryf' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Col' (imageprosseing/imgpro.c:46) in function 'binaryf' completely with a factor of 100.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 175.902 ; gain = 85.547
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 175.902 ; gain = 85.547
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'binaryf' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'binaryf' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Row'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('a_load_4', imageprosseing/imgpro.c:47) on array 'a' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'a'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 2, Final II = 50, Depth = 52.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 11.396 seconds; current allocated memory: 100.264 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.675 seconds; current allocated memory: 102.526 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'binaryf' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'binaryf/a' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'binaryf/b' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'binaryf' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'binaryf'.
+INFO: [HLS 200-111]  Elapsed time: 1.116 seconds; current allocated memory: 106.941 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 177.676 ; gain = 87.320
+INFO: [VHDL 208-304] Generating VHDL RTL for binaryf.
+INFO: [VLOG 209-307] Generating Verilog RTL for binaryf.
+INFO: [HLS 200-112] Total elapsed time: 17.287 seconds; peak allocated memory: 106.941 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'imageprosseing/imgpro.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 175.004 ; gain = 85.227
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 175.004 ; gain = 85.227
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:19 . Memory (MB): peak = 175.004 ; gain = 85.227
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:19 . Memory (MB): peak = 175.004 ; gain = 85.227
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Row' (imageprosseing/imgpro.c:44) in function 'binaryf' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Col' (imageprosseing/imgpro.c:46) in function 'binaryf' completely with a factor of 100.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:20 . Memory (MB): peak = 175.004 ; gain = 85.227
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:20 . Memory (MB): peak = 175.004 ; gain = 85.227
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'binaryf' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'binaryf' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Row'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('a_load_8', imageprosseing/imgpro.c:47) on array 'a' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'a'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 4, Final II = 50, Depth = 52.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 23.522 seconds; current allocated memory: 100.264 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.166 seconds; current allocated memory: 102.526 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'binaryf' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'binaryf/a' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'binaryf/b' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'binaryf' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'binaryf'.
+INFO: [HLS 200-111]  Elapsed time: 1.027 seconds; current allocated memory: 106.941 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:06 ; elapsed = 00:00:32 . Memory (MB): peak = 176.949 ; gain = 87.172
+INFO: [VHDL 208-304] Generating VHDL RTL for binaryf.
+INFO: [VLOG 209-307] Generating Verilog RTL for binaryf.
+INFO: [HLS 200-112] Total elapsed time: 31.636 seconds; peak allocated memory: 106.941 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'imageprosseing/imgpro.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 176.027 ; gain = 84.914
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 176.027 ; gain = 84.914
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 176.027 ; gain = 84.914
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 176.027 ; gain = 84.914
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 176.027 ; gain = 84.914
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 176.027 ; gain = 84.914
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'binaryf' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'binaryf' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 9.105 seconds; current allocated memory: 92.899 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.077 seconds; current allocated memory: 93.201 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'binaryf' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'binaryf/a' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'binaryf/b' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'binaryf' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'binaryf'.
+INFO: [HLS 200-111]  Elapsed time: 0.108 seconds; current allocated memory: 93.450 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 176.027 ; gain = 84.914
+INFO: [VHDL 208-304] Generating VHDL RTL for binaryf.
+INFO: [VLOG 209-307] Generating Verilog RTL for binaryf.
+INFO: [HLS 200-112] Total elapsed time: 10.302 seconds; peak allocated memory: 93.450 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'imageprosseing/imgpro.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 175.148 ; gain = 84.863
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 175.148 ; gain = 84.863
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 175.148 ; gain = 84.863
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 175.148 ; gain = 84.863
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Row' (imageprosseing/imgpro.c:44) in function 'binaryf' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Col' (imageprosseing/imgpro.c:46) in function 'binaryf' completely with a factor of 100.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 175.148 ; gain = 84.863
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 175.148 ; gain = 84.863
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'binaryf' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'binaryf' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Row'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('a_load_8', imageprosseing/imgpro.c:47) on array 'a' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'a'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 4, Final II = 50, Depth = 52.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 11.15 seconds; current allocated memory: 100.295 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.698 seconds; current allocated memory: 102.557 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'binaryf' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'binaryf/a' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'binaryf/b' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'binaryf' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'binaryf'.
+INFO: [HLS 200-111]  Elapsed time: 0.971 seconds; current allocated memory: 106.956 MB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:06 ; elapsed = 00:00:17 . Memory (MB): peak = 178.539 ; gain = 88.254
+INFO: [VHDL 208-304] Generating VHDL RTL for binaryf.
+INFO: [VLOG 209-307] Generating Verilog RTL for binaryf.
+INFO: [HLS 200-112] Total elapsed time: 16.864 seconds; peak allocated memory: 106.956 MB.

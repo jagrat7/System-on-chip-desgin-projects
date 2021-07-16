@@ -1,0 +1,50 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'imageprosseing/imgpro.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 174.879 ; gain = 84.117
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 174.879 ; gain = 84.117
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 174.879 ; gain = 84.117
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 174.879 ; gain = 84.117
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:10 . Memory (MB): peak = 174.879 ; gain = 84.117
+INFO: [XFORM 203-541] Flattening a loop nest 'row1' (imageprosseing/imgpro.c:212:3) in function 'compressf'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:11 . Memory (MB): peak = 174.879 ; gain = 84.117
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'compressf' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'compressf' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'row1_col1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 2, Final II = 2, Depth = 4.
+INFO: [SCHED 204-61] Pipelining loop 'row'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 2, Final II = 2, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 10.838 seconds; current allocated memory: 94.121 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 94.526 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'compressf' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'compressf/as' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'compressf/bs' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'compressf' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'compressf_mac_muladd_5ns_6ns_5ns_10_1_1' to 'compressf_mac_mulbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'compressf_mac_mulbkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'compressf'.
+INFO: [HLS 200-111]  Elapsed time: 0.216 seconds; current allocated memory: 95.276 MB.
+INFO: [RTMG 210-278] Implementing memory 'compressf_odoarr_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:03 ; elapsed = 00:00:13 . Memory (MB): peak = 174.879 ; gain = 84.117
+INFO: [VHDL 208-304] Generating VHDL RTL for compressf.
+INFO: [VLOG 209-307] Generating Verilog RTL for compressf.
+INFO: [HLS 200-112] Total elapsed time: 12.978 seconds; peak allocated memory: 95.276 MB.

@@ -1,0 +1,7 @@
+The goal of this project was to create different filters for image using different methods. The 100x100 image showcases the filters applied to a 100x100. 
+The original image was first converted to 100x100 in MATLAB and the its grayscale coordinates by transferred to the C file where the processing was done. 
+Vivado HLS was used in this project.
+
+- app.c is the main file in which the processing is done, testyy.c is the testbench written to check if it works on the hardware.
+-to open the hls  project, open the imageprosseing folder and click on vivado_hls app file, you will have to change top function depending on what you want to do.
+- the matlab script can be opened and run (might have to change path to read in the image)

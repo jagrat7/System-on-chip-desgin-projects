@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="imgpro.h" path="C:\Users\raoja\Desktop\uni\520\imageprosseing\imgpro.h"/>
+    <originFiles name="imgpro.c" path="C:\Users\raoja\Desktop\uni\520\imageprosseing\imgpro.c"/>
+  </source>
+  <testbench>
+    <originFiles name="testyy.c" path="C:\Users\raoja\Desktop\uni\520\imageprosseing\testyy.c"/>
+    <originFiles name="tb.c" path="C:\Users\raoja\Desktop\uni\520\tb.c"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

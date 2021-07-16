@@ -1,0 +1,14 @@
+The goal of this project is to design an SoC system consisting of both hardware and software 
+components for a specific task. The task is to design a specific waveform generator.
+The system is supposed to generate a periodic waveform defined by five parameters: Final value, 
+Drop value, Step horizontal value, step vertical value, and period. The following was assumed for the design:
+1. The block RAM on PL must be initialized with one period of the signal.
+2. The input parameters are specified by software application dynamically. The user needs to 
+be able to enter different parameters and get different waveforms.
+3.resolution of all parameters were 16 bits.
+
+My code generates the points for the waveform and using different inputs values different waveforms are generated.
+The coordinates for the generated points stored in the excel file.
+
+-to open vivado project go under the minip1 and click on minip1 app file, the sdk files are in this folder as well
+-for the sdk , the main c file(its called helloworld) can be under atm3mp1>src, a copy of it is also placed outside the main vivado project folder

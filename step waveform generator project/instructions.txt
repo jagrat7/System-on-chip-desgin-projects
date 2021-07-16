@@ -1,2 +1,0 @@
--to open vivado project go under the minip1 and click on minip1 app file, the sdk files are in this folder as well
--for the sdk , the main c file(its called helloworld) can be under atm3mp1>src, a copy of it is also placed outside the main vivado project folder

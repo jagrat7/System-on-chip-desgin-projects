@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="Auto Detect" key="atm3mp1-device"/>
+	<item value="C:\Users\raoja\Desktop\uni\520\minip1\design_1_wrapperatm2.bit" key="atm3mp1-bitFile"/>
+	<item value="_ide/bitstream/design_1_wrapperatm2.mmi" key="atm3mp1-bmmFile"/>
+	<item value="false" key="atm3mp1-partial_bit"/>
+	<item value="false" key="atm3mp1-skip_rev_check"/>
+	<item value="Local" key="atm3mp1-target"/>
+	<item value="atm3mp1" key="programfpga.sdxproject"/>
+</section>

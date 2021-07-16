@@ -1,0 +1,44 @@
+
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "xil_io.h"
+
+#define bram_address XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR
+
+
+
+
+int main()
+{
+	int final_value=500;
+	int drop_value=300;
+	int step_horizontal_value=3;
+	int step_vertical_value=5;
+	int period=600;
+	int i,k,x;
+	int wval=drop_value;
+
+
+	for(i=0,k=0;i<=period;i++,k=k+2)
+	{
+		if(wval>=final_value)
+		{
+			Xil_Out16(bram_address+k, final_value);
+		}
+		else
+		{
+			for(x=0;x<=step_horizontal_value;x=x+1,k=k+2)
+			{
+				//xil_printf("here\r\n");
+				Xil_Out16(bram_address+k, wval);
+			}
+			wval = wval+step_vertical_value;
+		}
+		xil_printf("in=%d\r\n",Xil_In16(bram_address+k));
+	}
+
+	return 0;
+
+}

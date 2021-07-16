@@ -1,0 +1,66 @@
+
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "xil_io.h"
+
+#define bram_address XPAR_AXI_BRAM_CTRL_0_S_AXI_BASEADDR
+
+void funcgennyfuck(int fv,int dp,int shv,int svv,int pz)
+{
+	int i;
+	int startpoint=fv-dp;
+	int wval=dp;
+
+	//Xil_Out16(bram_address, dp);
+		for(i=0;i<=pz;i++)
+		{
+
+			if(wval>=fv)
+			{
+				Xil_Out16(bram_address+((shv*2)+i), fv);
+			}
+			else
+			{
+
+				xil_printf("here\r\n");
+				Xil_Out16(bram_address+((shv*2)+i), wval);
+				wval = wval+svv;
+			}
+		}
+
+
+}
+
+
+int main()
+{
+	int final_value=500;
+	int drop_value=300;
+	int step_horizontal_value=3;
+	int step_vertical_value=5;
+	int period=600;
+	int i,k;
+	int wval=drop_value;
+
+	//funcgennyfuck(final_value,drop_value,step_horizontal_value,step_vertical_value,period);
+
+	for(i=0,k=0;i<=period;i++,k=k+2)
+	{
+					if(wval>=final_value)
+					{
+						Xil_Out16(bram_address+((step_horizontal_value*2)), final_value);
+					}
+					else
+					{
+						//xil_printf("here\r\n");
+						Xil_Out16(bram_address+((step_horizontal_value*2)), wval);
+						wval = wval+step_vertical_value;
+					}
+		xil_printf("pain=%d\r\n",Xil_In16(bram_address+k));
+	}
+
+	return 0;
+
+}

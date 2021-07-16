@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="atm3mp1" location="C:/Users/raoja/Desktop/uni/520/minip1/atm3mp1" platform="C:/Users/raoja/Desktop/uni/520/minip1/design_1_wrapperatm2/export/design_1_wrapperatm2/design_1_wrapperatm2.xpfm" platformUID="xilinx:zybo-z7-10::0.0(custom)" systemProject="atm3mp1_system" sysConfig="design_1_wrapperatm2" runtime="cpp" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="f00660d0072d7b68ed0b086fcb4fbab9">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1468352401" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.371680041" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>
